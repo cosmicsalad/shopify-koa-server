@@ -1,9 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shopify App</title>
-    <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@4.9.1/styles.min.css" />
-</head>
-<body>
-<h1>Shopify App</h1>
-</body>
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@4.9.1/styles.min.css" />
+	<link rel="stylesheet" href="uptown.css">
+	<style>
+		.column {
+			position:absolute;
+			left:50%;
+			transform:translateX(-50%);
+		}
+		.card label {
+			padding-bottom:20px;
+		}
+	</style>
+	<!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+	<title>LockPage</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+	<!-- built files will be auto injected -->
+	<main>
+		<section class="zero-state full-width">
+			<article>
+				<div class="column one-half">
+					<h1>LockPage</h1>
+					<p>Wow, it's just so easy.</p>
+					<div class="card">
+						<label>Create a Password:</label>
+  						<input type="text" />
+					</div>
+					<div class="card">
+						<label>Which Page would you like to lock?</label>
+						<select><option>Select</option></select>
+					</div>
+					<button>Save</button>
+				</div>
+			</article>
+		</section>
+	</main>
+  </body>
+</html>

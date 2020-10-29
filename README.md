@@ -1,16 +1,24 @@
-# shopify-koa-server
-A minimalist framework for creating Shopify authorised applications with Koa.js
+# example-shopify-app
 
-## server.js
-The server.js file utilises the Koa authorisation package provided by Shopify (koa-shopify-auth) to create a connection to your store and serve the app
+## Project setup
+```
+npm install
+```
 
-Based on this article on Shopify's website: https://www.shopify.com.au/partners/blog/shopify-admin-authenticate-app
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## .env file
-Once you set up your app in your partner account, add the API key and secret key here. These environment variables are what is used by the server.js file to authorise your application.
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## 'public' Directory
-The public folder is what is mounted by the app and displayed on the front-end. Use this to build out a Single Page Application (SPA) with whichever front-end framework you desire.
+### Lints and fixes files
+```
+npm run lint
+```
 
-## 'server' Directory
-The server folder holds a pre-built API client for using the GraphQL Admin API as well as templates for storing your API queries, API mutations and Koa routes.
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

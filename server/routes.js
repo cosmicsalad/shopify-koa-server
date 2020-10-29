@@ -1,8 +1,9 @@
 const Router = require('koa-router');
 const router = new Router();
-const parse = require('co-body');
+// const parse = require('co-body');
 
 // Import queries and mutations here
+const { getProducts } = require('./queries.js');
 
 const prepareAuth = (ctx) => {
     const accessToken = ctx.cookies.get("accessToken");
@@ -14,6 +15,11 @@ const prepareAuth = (ctx) => {
 };
 
 // Define routes here
+
+router.get('/products/', async (ctx) => {
+    const auth = prepareAuth(ctx);
+    await getProducts(auth).then(response => ctx.body = response.data.data.products);
+});
 
 module.exports = {
     router
